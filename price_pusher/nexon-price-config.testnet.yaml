@@ -1,16 +1,16 @@
 - alias: ETH/USD
   id: ca80ba6dc32e08d06f1aa886011eed1d77c77be9eb761cc10d72b7d0a2fd57a6
-  time_difference: 120
+  time_difference: 3600
   price_deviation: 0.5
   confidence_ratio: 1
 - alias: USDT/USD
   id: 1fc18861232290221461220bd4e2acd1dcdfbc89c84092c93c18bdc7756c1588
-  time_difference: 300
-  price_deviation: 0.5
+  time_difference: 86400
+  price_deviation: 0.25
   confidence_ratio: 1
 - alias: USDC/USD
   id: 41f3625971ca2ed2263e78573fe5ce23e13d2558ed3f2e47ab0f84fb9e7ae722
-  time_difference: 300
-  price_deviation: 0.5
+  time_difference: 86400
+  price_deviation: 0.25
   confidence_ratio: 1
 
