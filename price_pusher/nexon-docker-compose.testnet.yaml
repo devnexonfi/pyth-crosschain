@@ -49,19 +49,31 @@ services:
     depends_on:
       - spy
   price-pusher:
-    build:
-      context: .
+    # build:
+    #   context: .
     # Uncomment this line (and comment out the above lines) to use a prebuilt image. Replace <version>
     # with the latest released image of the EVM price pusher from this repo release page:
     # https://github.com/pyth-network/pyth-js/releases
-    # image: public.ecr.aws/pyth-network/xc-evm-price-pusher:v<version>
+    image: public.ecr.aws/pyth-network/xc-evm-price-pusher:v2.0.1
     restart: always
     command:
       - "--"
-      # you can choose to provide all the options here or a path to the config file
-      # we are providing a path to the config file
-      - "--config"
-      - "/command_config"
+      - "evm"
+      # # you can choose to provide all the options here or a path to the config file
+      # # we are providing a path to the config file
+      # - "--config"
+      # - "/command_config"
+      - "--evm-endpoint"
+      # Replace this with RPC endpoint URL for the EVM network.
+      - "https://zksync2-testnet.zksync.dev"
+      - "--mnemonic-file"
+      - "/mnemonic"
+      - "--pyth-contract"
+      - "0xC38B1dd611889Abc95d4E0a472A667c3671c08DE"
+      - "--price-endpoint"
+      - "http://price-service:4200"
+      - "--price-config-file"
+      - "/price_config"
     configs:
       - command_config
       - mnemonic

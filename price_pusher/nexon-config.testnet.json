@@ -1,7 +1,7 @@
 {
   "endpoint": "https://zksync2-testnet.zksync.dev",
   "pyth-contract-address": "0xC38B1dd611889Abc95d4E0a472A667c3671c08DE",
-  "price-service-endpoint": "https://xc-testnet.pyth.network",
+  "price-service-endpoint": "http://price-service:4200",
   "mnemonic-file": "./nexon-mnemonic.testnet.txt",
   "price-config-file": "./nexon-price-config.testnet.yaml"
 }
