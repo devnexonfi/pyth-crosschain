@@ -1,0 +1,7 @@
+{
+  "endpoint": "https://mainnet.era.zksync.io",
+  "pyth-contract-address": "0xf087c864AEccFb6A2Bf1Af6A0382B0d0f6c5D834",
+  "price-service-endpoint": "https://xc-mainnet.pyth.network",
+  "mnemonic-file": "./nexon-mnemonic.mainnet.txt",
+  "price-config-file": "./nexon-price-config.mainnet.yaml"
+}

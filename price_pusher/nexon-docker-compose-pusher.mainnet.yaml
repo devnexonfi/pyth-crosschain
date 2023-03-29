@@ -1,0 +1,40 @@
+services:
+  price-pusher:
+    # build:
+    #   context: .
+    # Uncomment this line (and comment out the above lines) to use a prebuilt image. Replace <version>
+    # with the latest released image of the EVM price pusher from this repo release page:
+    # https://github.com/pyth-network/pyth-js/releases
+    image: public.ecr.aws/pyth-network/xc-evm-price-pusher:v2.0.1
+    restart: always
+    env_file:
+      - ./.env
+    command:
+      - "--"
+      - "evm"
+      # # you can choose to provide all the options here or a path to the config file
+      # # we are providing a path to the config file
+      # - "--config"
+      # - "/command_config"
+      - "--evm-endpoint"
+      # Replace this with RPC endpoint URL for the EVM network.
+      - "https://mainnet.era.zksync.io"
+      - "--mnemonic-file"
+      - "/mnemonic"
+      - "--pyth-contract"
+      - "0xf087c864AEccFb6A2Bf1Af6A0382B0d0f6c5D834"
+      - "--price-endpoint"
+      - "https://xc-mainnet.pyth.network"
+      - "--price-config-file"
+      - "/price_config"
+    configs:
+      - command_config
+      - mnemonic
+      - price_config
+configs:
+  command_config:
+    file: ./nexon-config.mainnet.json
+  mnemonic:
+    file: ./nexon-mnemonic.mainnet.txt
+  price_config:
+    file: ./nexon-price-config.mainnet.yaml
