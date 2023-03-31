@@ -58,6 +58,8 @@ npm run start -- evm --endpoint wss://example-rpc.com \
     [--polling-frequency 5] \
     [--override-gas-price-multiplier 1.1]
 
+
+
 # For Injective
 npm run start -- injective --grpc-endpoint https://grpc-endpoint.com \
     --pyth-contract-address inj1z60tg0... --price-service-endpoint "https://example-pyth-price.com" \
@@ -137,3 +139,13 @@ pushed twiced and you won't pay additional costs most of the time.** However, th
 condiitons in the RPCs because they are often behind a load balancer than can sometimes cause rejected
 transactions land on-chain. You can reduce the chances of additional cost overhead by reducing the
 pushing frequency.
+
+
+npm run example-relay -- \                                                                     
+  --network "https://mainnet.era.zksync.io" \
+  --pyth-contract "0xf087c864AEccFb6A2Bf1Af6A0382B0d0f6c5D834"\
+  --mnemonic "climb link recipe must tilt stove topic wish chase case tool sad" \
+  --endpoint https://xc-mainnet.pyth.network \
+  --price-ids \
+    "0xeaa020c61cc479712813461ce153894a96a6c00b21ed0cfc2798d1f9a9e9c94a" \
+    "0xff61491a931112ddf1bd8147cd1b641375f79f5825126d665480874634fd0ace"
