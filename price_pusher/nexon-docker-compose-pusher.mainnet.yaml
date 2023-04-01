@@ -34,7 +34,7 @@ services:
 configs:
   command_config:
     file: ./nexon-config.mainnet.json
-  # mnemonic:
-  #   file: ./nexon-mnemonic.mainnet.txt
-  # price_config:
-  #   file: ./nexon-price-config.mainnet.yaml
+  mnemonic:
+    file: ./nexon-mnemonic.mainnet.txt
+  price_config:
+    file: ./nexon-price-config.mainnet.yaml
