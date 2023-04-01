@@ -14,19 +14,19 @@ services:
       - "evm"
       # # you can choose to provide all the options here or a path to the config file
       # # we are providing a path to the config file
-      # - "--config"
-      # - "/command_config"
-      - "--evm-endpoint"
-      # Replace this with RPC endpoint URL for the EVM network.
-      - "https://mainnet.era.zksync.io"
-      - "--mnemonic-file"
-      - "/mnemonic"
-      - "--pyth-contract"
-      - "0xf087c864AEccFb6A2Bf1Af6A0382B0d0f6c5D834"
-      - "--price-endpoint"
-      - "https://xc-mainnet.pyth.network"
-      - "--price-config-file"
-      - "/price_config"
+      - "--config"
+      - "/command_config"
+      # - "--evm-endpoint"
+      # # Replace this with RPC endpoint URL for the EVM network.
+      # - "https://mainnet.era.zksync.io"
+      # - "--mnemonic-file"
+      # - "/mnemonic"
+      # - "--pyth-contract"
+      # - "0xf087c864AEccFb6A2Bf1Af6A0382B0d0f6c5D834"
+      # - "--price-endpoint"
+      # - "https://xc-mainnet.pyth.network"
+      # - "--price-config-file"
+      # - "/price_config"
     configs:
       - command_config
       - mnemonic
@@ -34,7 +34,7 @@ services:
 configs:
   command_config:
     file: ./nexon-config.mainnet.json
-  mnemonic:
-    file: ./nexon-mnemonic.mainnet.txt
-  price_config:
-    file: ./nexon-price-config.mainnet.yaml
+  # mnemonic:
+  #   file: ./nexon-mnemonic.mainnet.txt
+  # price_config:
+  #   file: ./nexon-price-config.mainnet.yaml
