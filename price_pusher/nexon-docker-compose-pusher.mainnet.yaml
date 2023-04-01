@@ -15,7 +15,7 @@ services:
       # # you can choose to provide all the options here or a path to the config file
       # # we are providing a path to the config file
       - "--config"
-      - "/command_config"
+      - "./nexon-config.mainnet.json"
       # - "--evm-endpoint"
       # # Replace this with RPC endpoint URL for the EVM network.
       # - "https://mainnet.era.zksync.io"
